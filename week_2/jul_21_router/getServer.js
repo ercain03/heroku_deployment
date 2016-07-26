@@ -5,7 +5,7 @@ const Router = require('./lib/router');
 
 let routes = new Router('/api');
 
-routes.put('/hello', (req, res) => {
+routes.get('/hello', (req, res) => {
   res.writeHead(200, {
     'Content-Type': 'application/json'
   });
@@ -13,4 +13,4 @@ routes.put('/hello', (req, res) => {
   res.end();
 });
 
-module.exports = http.createServer(routes.route());
+http.createServer(routes.route()).listen(3000, () => console.log('server up'));
