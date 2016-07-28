@@ -6,7 +6,7 @@
   "scripts": {
     "test": "node_modules/mocha/bin/mocha test/customer-test",
     "debug": "DEBUG=* nodemon server",
-    "start": "node server"
+    "start": "node index"
   },
   "keywords": [],
   "author": "",
