@@ -5,10 +5,14 @@ const mongoose = require('mongoose');
 mongoose.Promise = Promise;
 mongoose.connect('mongodb://localhost/auth_dev');
 let app = require('express')();
+
 let authRouter = require('./routes/auth_router');
+let bearRouter = require('./routes/bear_router');
+
 let serverError = require('debug')('cfdemo:error');
 
 app.use('/api', authRouter);
+app.use('/api/bears', bearRouter);
 
 app.use((err, req, res, next) => {
   serverError(err);
