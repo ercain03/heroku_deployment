@@ -24,7 +24,7 @@ authRouter.get('/signin', BasicHTTP, (req, res, next) => {
   let authError = ErrorHandler(401, next, 'Authenticat Seyzz no!');
   User.findOne({'basic.email': req.auth.username}) 
     .then((user) => {
-      if (!user) return authError;
+      if (!user) return authError(new Error('No Such User'));
       user.comparePassword(req.auth.password)
         .then(res.json.bind(res), authError);
     }, authError);
