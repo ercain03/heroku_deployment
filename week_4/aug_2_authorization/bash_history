@@ -1,0 +1,100 @@
+  508  cd aug_2_authorization/
+  509  clear
+  510  ls
+  511  ls lib/
+  512  node
+  513  clear
+  514  mkdir test
+  515  cat test/example_bear.js | http :3000/api/bear
+  516  cat test/example_bear.js | http :3000/api/bears
+  517  cat test/example_bear.js | http :3000/api/bears
+  518  clear
+  519  cat test/example_bear.js | http :3000/api/bears
+  520  cat test/example_bear.js | http :3000/api/bears
+  521  cat test/example_bear.js | http :3000/api/bears
+  522  cat test/example_bear.js | http :3000/api/bears
+  523  cat test/example_bear.js | http :3000/api/bears
+  524  http :3000/api/bears
+  525  http :3000/api/bears
+  526  clear
+  527  cat test/example_bear.js | http :3000/api/bears
+  528  http :3000/api/bears
+  529  clear
+  530  ls
+  531  http -a test@example.com:foobar123 :3000/api/signin
+  532  man http
+  533  clear
+  534  ls
+  535  export TOKEN="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZGQiOiJ0ZXN0QGV4YW1wbGUuY29tIiwiaWF0IjoxNDcwMTcwODM1fQ.6iLxqva4VjbtXntkIPbvbpDQgfywgGvOXQzYVctf8wc"
+  536  echo $TOKEN
+  537  clear
+  538  ls
+  539  clear
+  540  cat test/example_bear.js | http :3000/api/bears token:"Bearer $TOKEN"
+  541  cat test/example_bear.js | http :3000/api/bears Authorization:"Bearer $TOKEN"
+  542  cat test/example_bear.js | http :3000/api/bears Authorization:"Bearer $TOKEN"
+  543  http :3000/api/bears
+  544  cat test/example_bear.js | http :3000/api/bears Authorization:"Bearer $TOKENskdljfa"
+  545  clear
+  546  ls
+  547  git add .
+  548  git status
+  549  git commit -m "authorization"
+  550  git push origin master
+  551  clear
+  552  ls
+  553  node
+  554  clear
+  555  ls
+  556  cat test/example_bear.js | http :3000/api/bears Authorization:"Bearer $TOKENskdljfa"
+  557  cat test/example_bear.js | http :3000/api/bears Authorization:"Bearer $TOKEN"
+  558  mongo
+  559  mongo
+  560  clear
+  561  echo '{"username":"test@example.com","password":"foobar123"}'
+  562  echo '{"username":"test@example.com","password":"foobar123"}' | http :3000/api/signup
+  563  echo '{"username":"test@example.com","password":"foobar123"}' | http :3000/api/signup
+  564  mongo
+  565  echo '{"username":"test@example.com","password":"foobar123"}' | http :3000/api/signup
+  566  echo '{"username":"test@example.com","password":"foobar123"}' | http :3000/api/signup
+  567  echo '{"email":"test@example.com","password":"foobar123"}' | http :3000/api/signup
+  568  echo '{"email":"test5@example.com","password":"foobar123"}' | http :3000/api/signup
+  569  clear
+  570  mongo
+  571  clear
+  572* 
+  573  clear
+  574  http :3000/api/signin -a test@example.com:foobar123
+  575  export TOKEN="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZGQiOiJ0ZXN0QGV4YW1wbGUuY29tIiwiaWF0IjoxNDcwMTczOTE3fQ.C5q-2Q0nI8BZ63yrtds_GkGaY0g3VsJrA9yLEm-psy0"
+  576  clear
+  577  http :3000/api/users Authorization:"Bearer $TOKEN"
+  578  echo '{"role": "admin"}' | http put :3000/api/addrole/57a110b4b3c8311701458659 Authorization:"Bearer $TOKEN"
+  579  export TOKEN="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZGQiOiJ0ZXN0QGV4YW1wbGUuY29tIiwiaWF0IjoxNDcwMTczOTE3fQ.C5q-2Q0nI8BZ63yrtds_GkGaY0g3VsJrA9yLEm-psy0"
+  580  http :3000/api/users Authorization:"Bearer $TOKEN"
+  581  echo '{"role": "wrangler"}' | http put :3000/api/addrole/57a110b4b3c8311701458659 Authorization:"Bearer $TOKEN"
+  582  http :3000/api/signin -a test5@example.com:foobar123
+  583  export TOKEN2="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZGQiOiJ0ZXN0NUBleGFtcGxlLmNvbSIsImlhdCI6MTQ3MDE3NDA4Mn0.uMbjlVGL4q7Cs0ViUQtzwzUHTPRObCbMdqaOwZKzjHI"
+  584  cat test/example_bear.js | http :3000/api/bears Authorization:"Bearer $TOKEN2"
+  585  cat test/example_bear.js | http :3000/api/bears Authorization:"Bearer $TOKEN2"
+  586  cat test/example_bear.js | http :3000/api/bears Authorization:"Bearer $TOKEN2"
+  587  cat test/example_bear.js | http :3000/api/bears Authorization:"Bearer $TOKEN2"
+  588  clear
+  589  history
+  590  man hitory
+  591  man history
+  592  history --help
+  593  history
+  594  history --help
+  595  histor -d 501
+  596  history -d 501
+  597  clear
+  598  history 501
+  599  man tail
+  600  man tial
+  601  man tail
+  602  history | tail -n 501
+  603  history | grep 501 +200
+  604  man grep
+  605  history 100
+  606  clear
+  607  history 100 > bash_history
