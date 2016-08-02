@@ -5,11 +5,11 @@ function Stack() {
   this.pop = Array.prototype.pop;
   this.peek = function(){
     return this[this.length -1];
-  }
+  };
 }
 
 var stack = new Stack();
 stack.push('a');
 stack.push('b');
-console.log(stack);
-stack.peek();
+console.log(stack.peek());
+console.log(stack.length);
