@@ -31,7 +31,7 @@ should be 1.8.2
 
 #### create a travis config 'travis.yml'
 use the .travis.yml (should no be git ignored) -  you can modify but be careful to keep format
-The "addons" sections is needed for mongo. There is an addon for bcrypt. See the 'travis.yml.bak' file for this addon.  
+The "addons" sections is needed for mongo and bcrypt. Remove bcrypt source and package if you don't need it.
 
 ```
 language: node_js
